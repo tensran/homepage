@@ -1,3 +1,29 @@
+# eslint
+
+skip 'eslint' error with `<neovim: trouble>`
+
+# ts version
+
+# warn on works distory check
+
+# menubar alphna problem
+
+## need to do
+
+## error by navbar > MenuLink
+
+`error  Type '{ children: string; as: ForwardRefExoticComponent<RefAttributes<HTMLAnchorElement>>; href: string; }' is not assignable to type 'IntrinsicAttributes`
+
+## svg file sample
+
+`~/build/blox/user/nextjsExamples/image-legacy-component/components/view-source.tsx`
+
+## @chakra-ui/react function error (maybe not support typescript)
+
+> find different way pack css and js
+
+interface css string: something wanring
+
 # sub
 
 ```
@@ -5,6 +31,31 @@
 https://chakra-ui.com/docs/components
 
 ```
+
+### @chakra-ui function props
+
+```
+   2 _ │ import {
+   3 _ │   Box,
+   4   │   Button,
+   5 + │   chakra,
+   6 + │   Container,
+   7 + │   Heading,
+   8 + │   Link,
+   9   │   List,
+  10   │   ListItem,
+  11 ~ │   SimpleGrid,
+  12 ~ │   useColorModeValue
+  13   │ } from '@chakra-ui/react'
+```
+
+input `Props` to overline
+
+# 0425
+
+when i click in tips or works folder pages, page will print again.
+
+> navbar need 2 save in cookies. lock down
 
 # 0417
 

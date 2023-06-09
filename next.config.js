@@ -1,5 +1,5 @@
-const nextConfig = {
-  distDir: 'src',
+module.exports = {
+  typescript: {},
   reactStrictMode: true,
   swcMinify: true
 }
