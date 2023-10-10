@@ -8,9 +8,7 @@ export const Title = ({ children }) => (
       Works
     </Link>
     <span>
-      {''}
       <ChevronRightIcon />
-      {''}
     </span>
     <Heading display="inline-block" as="h3" fontSize={20} mb={4}>
       {children}

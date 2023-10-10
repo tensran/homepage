@@ -1,11 +1,18 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
+import Loader from './threejs/loader'
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 0 },
   enter: { opacity: 1, x: 0, y: 0 },
   exit: { opacity: 0, x: -1, y: 0 }
 }
+
+const LazyVoxelDna = dynamic(() => import('./threejs/voxel-dna'), {
+  ssr: false,
+  loading: () => <Loader />
+})
 
 const Layout = ({ title, children }) => {
   const titleMsg = `${title} - co`

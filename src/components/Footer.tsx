@@ -1,6 +1,6 @@
 import { Box, BoxProps } from '@chakra-ui/react'
 
-function Footer(props: BoxProps) {
+const Footer = (props: BoxProps) => {
   const today = new Date()
 
   return (

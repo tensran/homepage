@@ -6,7 +6,6 @@ import {
   Heading,
   Flex,
   Menu,
-  MenuItem,
   MenuList,
   MenuButton,
   IconButton
@@ -15,11 +14,16 @@ import { HamburgerIcon, ViewIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './ThemeToggleButton'
 import { IoLogoGithub } from 'react-icons/io5'
 import { BarContainer } from './Container'
-import { BarBox } from './Box'
+import { BarBox, PhoneBox } from './Box'
 import { LinkItem } from './LinkItem'
 import { MenuLink } from './MenuLink'
+import { MenuItems } from './MenuItem'
 
-const Navbar = (props: any) => {
+type NavbarProps = {
+  path: string
+}
+
+const Navbar = (props: NavbarProps) => {
   const { path } = props
 
   return (
@@ -72,8 +76,7 @@ const Navbar = (props: any) => {
 
         <Box flex={1} textAlign="right">
           <ThemeToggleButton />
-
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+          <PhoneBox>
             <Menu id="navbar-menu">
               <MenuButton
                 as={IconButton}
@@ -82,15 +85,15 @@ const Navbar = (props: any) => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="/">
+                <MenuItems as={MenuLink} href="/">
                   About
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/works">
+                </MenuItems>
+                <MenuItems as={MenuLink} href="/works">
                   Works
-                </MenuItem>
+                </MenuItems>
               </MenuList>
             </Menu>
-          </Box>
+          </PhoneBox>
         </Box>
       </BarContainer>
     </BarBox>

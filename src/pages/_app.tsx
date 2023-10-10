@@ -1,7 +1,6 @@
 import { AnimatePresence } from 'framer-motion'
-import type { AppProps } from 'next/app'
+import { AppProps } from 'next/app'
 import Chakra from '../components/Chakra'
-import Footer from '../components/Footer'
 import Main from '../components/Main'
 
 if (typeof window !== 'undefined') {
@@ -14,7 +13,7 @@ function handleExitComplete() {
   }
 }
 
-function WebApp({ Component, pageProps, router }: AppProps) {
+function WebApp({ Component, pageProps, router }) {
   return (
     <Chakra cookies={pageProps.cookies}>
       <AnimatePresence
@@ -24,7 +23,6 @@ function WebApp({ Component, pageProps, router }: AppProps) {
       >
         <Main router={router}>
           <Component {...pageProps} key={router.route} />
-          <Footer />
         </Main>
       </AnimatePresence>
     </Chakra>

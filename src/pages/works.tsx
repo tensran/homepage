@@ -2,7 +2,7 @@
 
 import type { NextPage } from 'next'
 import { SimpleGrid, Heading, Divider, Container } from '@chakra-ui/react'
-import { WorkGridItem } from '../components/GridItem'
+import { WorkGridItem } from '../components/Grid-Item'
 import Section from '../components/Section'
 import Layout from '../components/Layout'
 import thumbFish from '/public/fish.png'

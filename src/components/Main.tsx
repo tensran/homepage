@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
 import Navbar from './navbar/index'
+import Footer from './Footer'
 import { MainProps } from '../lib/utils'
+import SphereModel from './threejs/ball'
 
 const Main = ({ children, router }: MainProps) => {
   return (
@@ -17,7 +19,10 @@ const Main = ({ children, router }: MainProps) => {
         <title>C.I.C - Homepage</title>
       </Head>
       <Navbar path={router.asPath} />
-      <Container>{children}</Container>
+      <Container maxW="container.md" pt={14}>
+        {children}
+        <Footer />
+      </Container>
     </Box>
   )
 }

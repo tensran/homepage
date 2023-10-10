@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import { Link as ChakraLink, useColorModeValue } from '@chakra-ui/react'
-import { LinkItemProps } from './utils'
+import { LinkItemProps } from '../../lib/utils'
 
 export const LinkItem = ({
   href,

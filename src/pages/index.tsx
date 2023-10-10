@@ -2,7 +2,7 @@
 
 import type { NextPage } from 'next'
 import { Box, Heading, Container, useColorModeValue } from '@chakra-ui/react'
-import { ProfileImage } from '../components/ProfileImage'
+import { ProfileImage } from '../components/Profile-Image'
 import Layout from '../components/Layout'
 
 const Home: NextPage = () => {

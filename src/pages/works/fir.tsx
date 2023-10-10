@@ -44,7 +44,7 @@ const Work: NextPage = () => (
         <ListItem>
           <Meta>Blogpost</Meta>
           <Link href="localhost:3010">
-            Deep Learningを使って映像作品を作った
+            Deep Learning
             <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>

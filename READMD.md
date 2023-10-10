@@ -1,14 +1,50 @@
+# WARNNING
+
+- `在 MyDocument 中看到的 <Head> 實際上與 next/head 不太一樣，主要是因為 Document 只會在伺服器端渲染，而且只會渲染一次，在 <Head> 裡面的設定讓整個專案所有的頁面都會是一樣的，因此官方在 Next.js 10 的版本中建議使用者不要再 <Head> 裡面使用像是 <title> 的 tag，它應該被使用在 next/head 裡面。`
+
+# need 2 do
+
+- create threejs mode and normal eff ( framer-motion ) mode.
+
+# news
+
+Generics Types translted
+
 # eslint
 
 skip 'eslint' error with `<neovim: trouble>`
 
 # ts version
 
+## vite >>> turbo
+
+```
+error - [resolve]
+  src/components/navbar/Box.tsx
+    Error resolving EcmaScript Modules request
+    unable to resolve module "styled-components"
+
+  src/pages/index.tsx
+    Error resolving EcmaScript Modules request
+    unable to resolve module "styled-components"
+
+```
+
 # warn on works distory check
 
 # menubar alphna problem
 
-## need to do
+## need to do \*
+
+- maybe can change three.js > babylon.js
+- clone three/example/\* three demo list
+- learn react
+  - useEffect
+  - useState
+  - useCallback
+  - useRef
+
+# how 2 get .glb on browser cmd
 
 ## error by navbar > MenuLink
 

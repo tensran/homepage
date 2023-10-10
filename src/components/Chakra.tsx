@@ -6,15 +6,14 @@ import {
   ChakraProvider
 } from '@chakra-ui/react'
 import { GetServerSidePropsContext } from 'next'
-import { ReactNode } from 'react'
 import theme from '../lib/theme'
 
-interface ChakraProps {
+type ChakraCookiesProps = {
   cookies?: string
-  children: ReactNode
+  children: React.ReactNode
 }
 
-function Chakra({ cookies, children }: ChakraProps) {
+function Chakra({ cookies, children }: ChakraCookiesProps) {
   const colorModeManager =
     typeof cookies == 'string'
       ? cookieStorageManagerSSR(cookies)
@@ -26,11 +25,7 @@ function Chakra({ cookies, children }: ChakraProps) {
   )
 }
 
-export type ServerSideProps<T> = { props: T } | Promise<{ props: T }>
-
-export function getServerSideProps({
-  req
-}: GetServerSidePropsContext): ServerSideProps<{ cookies?: string }> {
+export async function getServerSideProps({ req }: GetServerSidePropsContext) {
   return {
     props: {
       cookies: req.headers.cookie ?? ''
