@@ -5,16 +5,22 @@
   "license": "MIT",
   "private": true,
   "author": "cic",
+  "eslintIgnore": [
+    "/node_modules",
+    "/build",
+    "/public/build"
+  ],
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@studio-freight/lenis": "^1.0.33",
+    "@studio-freight/react-lenis": "^0.0.39",
     "framer-motion": "^10.0.1",
     "next": "^13.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
     "three": "^0.150.1"
   },
   "devDependencies": {

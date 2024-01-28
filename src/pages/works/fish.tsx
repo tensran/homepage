@@ -1,5 +1,7 @@
-import Layout from '../../components/Layout'
-import P from '../../components/Paragraph'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+
+import Layout from '@/components/Layout'
+import P from '@/components/Paragraph'
 import {
   Container,
   Badge,
@@ -10,15 +12,15 @@ import {
   UnorderedList,
   Center
 } from '@chakra-ui/react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, Meta } from '../../components/works'
+import { Title, Meta } from '@/components/work'
 import type { NextPage } from 'next'
 
 const Work: NextPage = () => (
   <Layout title="First Page">
     <Container>
       <Title>
-        First Page <Badge>2016-2023</Badge>
+        First Page
+        <Badge>2016-2023</Badge>
       </Title>
       <P>
         A Markdown note-taking app with 100+ plugins, cross-platform and
@@ -30,9 +32,10 @@ const Work: NextPage = () => (
           <span>DeepLearning, neural-style, Caffe, NodeJS</span>
         </ListItem>
         <ListItem>
-          <Meta>Presentation</Meta>{' '}
+          <Meta>Presentation</Meta>
           <Link href="localhost:3010">
-            The fun Deep Learning <ExternalLinkIcon mx="2px" />{' '}
+            The fun Deep Learning
+            <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>

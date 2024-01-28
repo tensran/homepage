@@ -1,6 +1,8 @@
-import { motion } from 'framer-motion'
+import { motion, Transition } from 'framer-motion'
 import { chakra, shouldForwardProp, Box } from '@chakra-ui/react'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+
+import { StyleDivProps } from '@/lib/utils'
 
 // import dynamic from 'next/dynamic' // how 2 use this fast with useState & useEffect
 
@@ -10,7 +12,7 @@ const StyleDiv = chakra(motion.div, {
   }
 })
 
-const Section = ({ children, delay = 0 }) => {
+const Section = ({ children, delay = 0 }: StyleDivProps) => {
   // check javascript support
   const [client, setClient] = useState(false)
 
@@ -20,11 +22,16 @@ const Section = ({ children, delay = 0 }) => {
     return <Box display={{ md: 'flex' }}>{children}</Box>
   }
 
+  const transition: Transition = {
+    duration: 0.8,
+    delay
+  }
+
   return (
     <StyleDiv
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transitionDelay={delay}
+      transition={transition}
       mb={6}
     >
       {children}

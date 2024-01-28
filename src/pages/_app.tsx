@@ -1,7 +1,8 @@
 import { AnimatePresence } from 'framer-motion'
-import { AppProps } from 'next/app'
-import Chakra from '../components/Chakra'
-import Main from '../components/Main'
+import type { AppProps } from 'next/app'
+import Chakra from '@/components/Chakra'
+import Main from '@/components/Main'
+import SmoothScrolling from '@/components/SmoothScrolling'
 
 if (typeof window !== 'undefined') {
   window.history.scrollRestoration = 'manual'
@@ -13,7 +14,7 @@ function handleExitComplete() {
   }
 }
 
-function WebApp({ Component, pageProps, router }) {
+function WebApp({ Component, pageProps, router }: AppProps) {
   return (
     <Chakra cookies={pageProps.cookies}>
       <AnimatePresence
@@ -22,7 +23,9 @@ function WebApp({ Component, pageProps, router }) {
         initial={true}
       >
         <Main router={router}>
-          <Component {...pageProps} key={router.route} />
+          <SmoothScrolling>
+            <Component {...pageProps} key={router.route} />
+          </SmoothScrolling>
         </Main>
       </AnimatePresence>
     </Chakra>

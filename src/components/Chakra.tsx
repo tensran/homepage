@@ -1,12 +1,10 @@
-'use client'
-
 import {
   cookieStorageManagerSSR,
   localStorageManager,
   ChakraProvider
 } from '@chakra-ui/react'
 import { GetServerSidePropsContext } from 'next'
-import theme from '../lib/theme'
+import theme from '@/lib/theme'
 
 type ChakraCookiesProps = {
   cookies?: string
@@ -15,7 +13,7 @@ type ChakraCookiesProps = {
 
 function Chakra({ cookies, children }: ChakraCookiesProps) {
   const colorModeManager =
-    typeof cookies == 'string'
+    typeof cookies === 'string'
       ? cookieStorageManagerSSR(cookies)
       : localStorageManager
   return (

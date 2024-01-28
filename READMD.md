@@ -1,10 +1,65 @@
+# problem
+
+- `Allowed "/home/put1ng/build/gt/homepage/src/components/Section.tsx" in trust database.
+` how can i disable trust database
+
+## `react-icons` >> `lucide-react`
+
+```
+warning " > @chakra-ui/icons@2.0.17" has unmet peer dependency "@chakra-ui/system@>=2.0.0".
+warning "@chakra-ui/icons > @chakra-ui/icon@3.0.16" has unmet peer dependency "@chakra-ui/system@>=2.0.0".
+
+```
+
+## `chakra` >> `@radix-ui`
+
+not match chakra version
+
 # WARNNING
 
 - `在 MyDocument 中看到的 <Head> 實際上與 next/head 不太一樣，主要是因為 Document 只會在伺服器端渲染，而且只會渲染一次，在 <Head> 裡面的設定讓整個專案所有的頁面都會是一樣的，因此官方在 Next.js 10 的版本中建議使用者不要再 <Head> 裡面使用像是 <title> 的 tag，它應該被使用在 next/head 裡面。`
 
 # need 2 do
 
+- 20/01/2024: change version to one page
+- 18/01/2024: setup DropdownMenu look like Github webpage
+
+- 0103: miss `gsap` N `@studio-freight/react-lenis;`
+
+- 1227:
+
+  - change `Chakra` && `react-icons` packages, get mini version and fast load
+  - `com*/work` what s using for
+
+- 1226: check the `GridItemStyle` what s using for
+
+- 1223: TypeError: Failed to parse URL from @/data/index.json: check `@/components/Chakra.tsx` line 20
+
+- 1220: change works page image problem
+
+  - ```
+       <Section>       // add map to white title and other title
+
+         <WorkGridItem id="fir" title="First Page" thumbnail={thumbFish}>   <<<<!!!!!!
+           Twitter client app for iPhone Safari
+         </WorkGridItem>
+
+        <WorkGridItem id="sec" title="Sec Page" thumbnail={thumbBox}>       <<<<!!!!!!
+
+           A Markdown note-taking app with 100+ plugins, cross-platform and
+           encrypted data sync support
+         </WorkGridItem>
+       </Section>
+    ```
+
+    `thumbnail` problem with json src content
+
+  ```
+
+  ```
+
 - create threejs mode and normal eff ( framer-motion ) mode.
+- change message to JSON file: [ src, name, img, link]
 
 # news
 
@@ -166,3 +221,7 @@ in `[slug: 'filename']`
 `variant='section-title'` motion with sub-line(title)
 
 ## navbar >> asPath
+
+```
+
+```

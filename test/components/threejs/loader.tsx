@@ -17,7 +17,7 @@ type DnaContainerProps = {
 }
 
 export const DnaContainer = forwardRef<HTMLDivElement, DnaContainerProps>(
-  ({ children }, ref) => (
+  ({ children }: { children: React.ReactNode }, ref) => (
     <Box
       ref={ref}
       className="voxel-dna"

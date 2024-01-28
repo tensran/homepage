@@ -1,0 +1,30 @@
+{
+  "header": [
+    {
+      "name": "📎 Works",
+      "href": "/works"
+    },
+    {
+      "name": "📔 Day After Day",
+      "href": "https://cdaybidayc.netlify.app"
+    },
+    {
+      "name": "💾 Source",
+      "href": "https://github.com/"
+    }
+  ],
+  "works": [
+    {
+      "id": "fish",
+      "title": "Fish Page",
+      "thumbnail": "/public/fish.png",
+      "msg": "Twitter client app for iPhone Safari"
+    },
+    {
+      "id": "cat",
+      "title": "Cat Page",
+      "thumbnail": "/public/box.png",
+      "msg": "A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support"
+    }
+  ]
+}

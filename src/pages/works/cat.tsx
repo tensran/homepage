@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import { Container, Badge } from '@chakra-ui/react'
-import P from '../../components/Paragraph'
-import Layout from '../../components/Layout'
-import { Title } from '../../components/works'
+import P from '@/components/Paragraph'
+import Layout from '@/components/Layout'
+import { Title } from '@/components/work'
 
 const Work: NextPage = () => (
-  <Layout title="Sec Page">
+  <Layout title="Cat Page">
     <Container>
       <Title>
         Sec Page <Badge>2016-2023</Badge>

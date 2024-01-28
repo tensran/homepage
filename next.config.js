@@ -1,5 +1,6 @@
-module.exports = {
-  typescript: {},
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true
 }
+
+module.exports = nextConfig

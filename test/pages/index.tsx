@@ -1,7 +1,10 @@
 'use client'
 
+import type { NextPage } from 'next'
+import NextLink from 'next/link'
 import {
   Box,
+  Link,
   Heading,
   List,
   ListItem,
@@ -9,25 +12,14 @@ import {
   Container,
   useColorModeValue
 } from '@chakra-ui/react'
-import NextLink from 'next/link'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
 import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
-
 import Layout from '@/components/Layout'
 import Section from '@/components/Section'
 import { ProfileImage } from '@/components/Profile-Image'
-import Lazy from '@/components/Lazy'
 import P from '@/components/Paragraph'
 import ProfileImageAlex from '/public/product-alex.jpg'
 
-const HomePage = () => {
-  const router = useRouter()
-
-  useEffect(() => {
-    router.prefetch('/wokrs')
-  }, [])
-
+const Home: NextPage = () => {
   return (
     <Layout title="cic">
       <Container>
@@ -48,51 +40,37 @@ const HomePage = () => {
             </Heading>
             <p>Digital Craftsman ( Artist / Developer / Designer )</p>
           </Box>
-          <Lazy>
+          <Box
+            flexShrink={0}
+            mt={{ base: 4, md: 0 }}
+            ml={{ md: 6 }}
+            textAlign="center"
+          >
             <Box
-              flexShrink={0}
-              mt={{ base: 4, md: 0 }}
-              ml={{ md: 6 }}
-              textAlign="center"
+              borderColor={useColorModeValue('gray.900', 'whiteAlpha.800')}
+              borderWidth={2}
+              borderStyle="solid"
+              w="100px"
+              h="100px"
+              display="inline-block"
+              borderRadius="full"
+              overflow="hidden"
             >
-              <Box
-                borderColor={useColorModeValue('gray.900', 'whiteAlpha.800')}
-                borderWidth={2}
-                borderStyle="solid"
-                w="100px"
-                h="100px"
-                display="inline-block"
+              <ProfileImage
+                src={ProfileImageAlex}
+                alt="Profile image"
                 borderRadius="full"
-                overflow="hidden"
-              >
-                <ProfileImage
-                  src={ProfileImageAlex}
-                  alt="Profile image"
-                  borderRadius="full"
-                  width="100"
-                  height="100"
-                />
-              </Box>
+                width="100"
+                height="100"
+              />
             </Box>
-          </Lazy>
+          </Box>
         </Box>
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
             Work
           </Heading>
-          <P>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English.{' '}
-          </P>
-          <P>
-            Just edit the config.json file with details about your company and
-            voila your beautiful state of the art landing page is ready to go
-            live! Remember to also update your assets, add any images you want
-            to show to /assets/images and link them in the config.json
-          </P>
+          <P>Test Msg </P>
           <Box textAlign="center" my={4}>
             <Button
               as={NextLink}
@@ -111,11 +89,11 @@ const HomePage = () => {
           </Heading>
           <List>
             <ListItem>
-              <NextLink href="https://github.com/" target="_blank">
+              <Link href="https://github.com/" target="_blank">
                 <Button variant="ghost" colorScheme="teal">
                   @C.I.C
                 </Button>
-              </NextLink>
+              </Link>
             </ListItem>
           </List>
           <Heading as="h3" variant="section-title">
@@ -139,6 +117,6 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default Home
 
 export { getServerSideProps } from '../components/Chakra'
