@@ -63,10 +63,41 @@ const Header: React.FC<HeaderProps> = props => {
       alignItems="center"
       position="fixed"
       bg={useColorModeValue('#ffffff40', '#20202380')}
-      css={{ background: 'transparent' }}
+      css={
+        isDesktop
+          ? { background: 'transparent' }
+          : { backdropFilter: 'blur(10px)' }
+      }
       zIndex={2}
     >
       <Container display="flex" p={2} maxW="container.md">
+        <Flex align="center" mr={5}>
+          <Heading as="h1" size="lg" letterSpacing="tighter">
+            <LinkItem href="/" target="_self" path={path}>
+              C.I.C
+            </LinkItem>
+          </Heading>
+        </Flex>
+
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
+          alignItems="center"
+          flexGrow={1}
+          mt={{ base: 4, md: 0 }}
+        >
+          <LinkItem href="/works" path={path}>
+            Works
+          </LinkItem>
+          <LinkItem href="/posts" path={path}>
+            Posts
+          </LinkItem>
+          <LinkItem href="/vstack" path={path}>
+            vstack
+          </LinkItem>
+        </Stack>
+
         <Box flex={1} textAlign="right">
           <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>

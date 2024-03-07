@@ -21,6 +21,7 @@ not match chakra version
 
 # need 2 do
 
+- 02/02/2024: phone and pc page model, check css `max-width` size (max-w from `_app.tsx` >> `Main.tsx`)
 - 20/01/2024: change version to one page
 - 18/01/2024: setup DropdownMenu look like Github webpage
 

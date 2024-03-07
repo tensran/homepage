@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import { Box, Container } from '@chakra-ui/react'
+import { Box, Container, useMediaQuery } from '@chakra-ui/react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import type { MainProps } from '@/lib/utils'
 
 const Main = ({ children, router }: MainProps) => {
+  const [isDesktop] = useMediaQuery('(min-width: 768px)', {})
   return (
     <Box as="main" pb={8}>
       <Head>
@@ -17,8 +18,8 @@ const Main = ({ children, router }: MainProps) => {
         <meta property="og:type" content="website" />
         <title>C.I.C - Homepage</title>
       </Head>
-      <Header path={router.asPath} />
-      <Container maxW="container.lg" pt={14}>
+      <Container maxW={isDesktop ? 'max-content' : 'lg'} pt={14}>
+        <Header path={router.asPath} />
         {children}
         <Footer />
       </Container>

@@ -119,4 +119,4 @@ const Home: NextPage = () => {
 
 export default Home
 
-export { getServerSideProps } from '../components/Chakra'
+export { getServerSideProps } from '@/components/Chakra'

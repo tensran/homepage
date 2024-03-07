@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 import { GridItemStyle } from '@/components/Grid-Item'
 
-import Loader from '@/components/threejs/loader'
+// import Loader from '@/components/threejs/loader'
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 0 },
@@ -11,10 +10,10 @@ const variants = {
   exit: { opacity: 0, x: -1, y: 0 }
 }
 
-const LazyVoxelDna = dynamic(() => import('@/components/threejs/voxel-dna'), {
-  ssr: false,
-  loading: () => <Loader />
-})
+// const LazyVoxelDna = dynamic(() => import('@/components/threejs/voxel-dna'), {
+//   ssr: false,
+//   loading: () => <Loader />
+// })
 
 const Layout = ({
   title,
